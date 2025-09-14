@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap");
+/* Base Styles */
+
+/* Cyberpunk themed fonts */
+@font-face {
+  font-family: "Cyberfont";
+  src: url("/fonts/cyber1.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
