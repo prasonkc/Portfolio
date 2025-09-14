@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap");
-/* Base Styles */
 
 /* Cyberpunk themed fonts */
 @font-face {
@@ -9,4 +7,13 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+/* Flicker */
+@keyframes flicker {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.85; /* very subtle flicker */
+  }
 }

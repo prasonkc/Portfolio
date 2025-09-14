@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useRef } from "react";
 
 const Background = () => {
   // Create a refrence to canvas
@@ -19,11 +20,15 @@ const Background = () => {
     // Preparing the binary letters
     const binary = "01";
     const fontSize = 16;
+    const initialDensity = 2;
+    const finalDensity = 0.2;
 
     // Determining the total colums for vertical stream
     const col = Math.floor(canvas.width / fontSize);
     // Storing vertical position of each column's letter\
-    const drops = Array(col).fill(i);
+    const drops = Array(col).fill(1);
+    // Track when the animation resets
+    const resetting = Array(col).fill(false)
 
     // Draw the animation on canvas
     function draw() {
@@ -33,16 +38,27 @@ const Background = () => {
 
       // Set the font
       pen.font = `${fontSize}px monospace`;
-      ctx.fillStyle = "#0ff";
+      pen.fillStyle = "#0ff";
 
-      
+      //Draw Each colums
+      for (let i = 0; i < drops.length; i++) {
+        // Set the density
+        const density = resetting[i] ? finalDensity : initialDensity;
 
-      // Move the drop down
-      drops[i]++;
+        if (Math.random() < density) {
+          // Pick between 0 or 1
+          const text = binary.charAt(Math.floor(Math.random() * binary.length));
+          // write to canvas
+          pen.fillText(text, i * fontSize, drops[i] * fontSize);
 
-      // Reset when letters go off screen
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
+          // Move the drop down
+          drops[i]++;
+          // Reset when letters go off screen
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+            resetting[i] = true;
+          }
+        }
       }
 
       // Repeat the animation
