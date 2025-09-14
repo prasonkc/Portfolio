@@ -20,7 +20,7 @@ const Background = () => {
     // Preparing the binary letters
     const binary = "01";
     const fontSize = 16;
-    const initialDensity = 2;
+    const initialDensity = 1;
     const finalDensity = 0.2;
 
     // Determining the total colums for vertical stream
@@ -38,7 +38,7 @@ const Background = () => {
 
       // Set the font
       pen.font = `${fontSize}px monospace`;
-      pen.fillStyle = "#0ff";
+      pen.fillStyle = "#2EFF2E";
 
       //Draw Each colums
       for (let i = 0; i < drops.length; i++) {

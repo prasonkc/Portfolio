@@ -3,14 +3,18 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-    {/* Name Section */}
-      <div className="flex items-center justify-center h-[80vh]">
+      {/* Name Section */}
+      <div className="flex items-center justify-center">
         <div
-          className="text-[12rem] tracking-wider leading-relaxed sm:text-[8rem] md:text-[17rem] font-extrabold text-center text-white"
+          className="tracking-wider leading-relaxed text-[12vw] font-extrabold text-center text-white"
           style={{
             fontFamily: "'Cyberfont', sans-serif",
             color: "#00ffe5",
-            textShadow: "0 0 8px rgba(0,255,229,0.7), 0 0 10px rgba(0,255,229,0.5)",
+            textShadow: `
+            2px 2px 0 #ff00ff,
+            4px 4px 0 #0ff,
+            6px 6px 0 rgba(0,0,0,0.5)
+            `,
             animation: "flicker 2.5s infinite alternate",
           }}
         >
