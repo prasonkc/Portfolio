@@ -8,6 +8,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Cyberglitch";
+  src: url("/fonts/Cyberglitch.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Flicker */
 @keyframes flicker {
   0%, 50%, 100% {
