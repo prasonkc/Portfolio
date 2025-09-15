@@ -9,9 +9,11 @@ function App() {
   return (
     <>
       <Background />
-      <Navbar />
-      <Hero />
-      <Protrait />
+      <div className="mx-10 md:">
+        <Navbar />
+        <Hero />
+        <Protrait />
+      </div>
     </>
   );
 }
