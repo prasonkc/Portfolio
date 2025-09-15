@@ -21,63 +21,6 @@ body{
   font-display: swap;
 }
 
-/* Flicker */
-@keyframes flicker {
-  0%, 50%, 100% {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0.85;
-  }
-}
-
-/* Animation for frame glow */
-@keyframes neonGlow {
-  0%, 100% {
-    box-shadow: 
-      0 0 5px #00fff0, 
-      0 0 10px #00fff0, 
-      0 0 15px #00fff0;
-  }
-  50% {
-    box-shadow: 
-      0 0 10px #00fff0, 
-      0 0 20px #00fff0, 
-      0 0 30px #00fff0;
-  }
-}
-
-/* frame animation */
-.cyberpunk-frame {
-  border: 2px solid #00fff0;
-  border-radius: 1rem; 
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.7); 
-  animation: neonGlow 2s infinite ease-in-out;
-  box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0;
-}
-
-/* Animation for cursor */
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px rgba(255,0,255,0.4);
-  }
-  50% {
-    box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 50px #ff00ff, 0 0 100px rgba(255,0,255,0.5);
-  }
-}
-
-/* Text animation */
-.cybertext {
-  font-family: 'Cyberfont', sans-serif;
-  color: #00ffe5;
-  text-shadow:
-    8px 8px 0 #ff00ff,
-    10px 10px 0 #0ff,
-    15px 15px 0 rgba(0, 0, 0, 0.5);
-  animation: flicker 2.5s infinite alternate;
-}
-
 /* Media Query */
 /* Tablet and below */
 @media (max-width: 1024px) {
