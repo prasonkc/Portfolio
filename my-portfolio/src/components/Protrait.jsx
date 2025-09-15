@@ -2,8 +2,8 @@ import React from "react";
 
 const Portrait = () => {
   return (
-    <div className="flex gap-10 mx-10 md:mx-85 sm:mx-10 flex-col sm:flex-row">
-      <div className="cyberpunk-frame w-80 md:w-[450px] h-80 md:h-[450px] bg-black/70 border-2 border-cyan-400 rounded-xl shadow-lg shadow-cyan-400/50 flex items-center justify-center relative overflow-hidden">
+    <div className="flex gap-10 mx-10 md:mx-85 sm:mx-5 flex-col sm:flex-row">
+      <div className="cyberpunk-frame w-80 md:w-[450px] h-80 md:h-[450px] bg-black/70 border-2 border-cyan-400 rounded-xl shadow-lg shadow-cyan-400/50 flex items-center justify-center relative overflow-hidden md:mx-0 mx-auto">
         {/* Portrait inside the window, flush with frame */}
         <img
           src="/protrait.png"
@@ -14,7 +14,7 @@ const Portrait = () => {
 
       {/* Description */}
       <div
-        className="desc text-cyan-200 w-[60%] text-3xl"
+        className="text-cyan-200 w-[100%] md:w-[60%] text-3xl z-10"
         style={{
           fontFamily: "'Cyberfont', monospace",
           color: "#00ffd0",
