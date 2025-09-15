@@ -1,15 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Portrait = () => {
+  const [hover, setHover] = useState(false);
+
+  // Array of texts
+  const texts = ["I'm shy!", "Please dont touch me", "NO!", "help!", "pls hire me 😭"]
+
+  // Pick a random text
+  const randomText = texts[Math.floor(Math.random() * texts.length)];
   return (
-    <div className="w-[67vw] mx-auto flex flex-col sm:flex-row gap-10 items-center sm:items-start">
+    <div className="w-[60vw] mx-auto flex flex-col sm:flex-row gap-10 items-center sm:items-start">
       {/* Portrait frame */}
-      <div className="cyberpunk-frame w-[70vw] sm:w-[400px] md:w-[450px] aspect-square bg-black/70 border-2 border-cyan-400 rounded-xl shadow-lg shadow-cyan-400/50 flex items-center justify-center relative overflow-hidden">
+      <div
+        className="cyberpunk-frame w-[70vw] sm:w-[400px] md:w-[450px] aspect-square bg-black/70 border-2 border-cyan-400 rounded-xl shadow-lg shadow-cyan-400/50 flex items-center justify-center relative overflow-visible"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        {/* Image */}
         <img
           src="/protrait.png"
           alt="cyberhero"
-          className="w-full h-full object-cover rounded-[inherit] opacity-90"
+          className={`
+            w-full h-full object-cover rounded-xl 
+            transition-all duration-400 ease-in-out
+            ${hover ? "translate-y-[100%] opacity-0" : "translate-y-0 opacity-90"}
+          `}
         />
+
+        {/* Tooltip */}
+        <div
+          className={`
+            absolute bottom-6 left-1/2 transform -translate-x-1/2
+            bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg
+            ${hover ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
+          `}
+        >
+          {randomText}
+        </div>
       </div>
 
       {/* Description */}
