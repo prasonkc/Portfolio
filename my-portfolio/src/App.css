@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body{
+  cursor: none;
+}
+
 /* Cyberpunk themed fonts */
 @font-face {
   font-family: "Cyberfont";
@@ -27,11 +31,7 @@
   }
 }
 
-@keyframes crackJitter {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(0.5deg); }
-}
-
+/* Animation for frame glow */
 @keyframes neonGlow {
   0%, 100% {
     box-shadow: 
@@ -47,6 +47,7 @@
   }
 }
 
+/* frame animation */
 .cyberpunk-frame {
   border: 2px solid #00fff0;
   border-radius: 1rem; 
@@ -56,6 +57,17 @@
   box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0;
 }
 
+/* Animation for cursor */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px rgba(255,0,255,0.4);
+  }
+  50% {
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 50px #ff00ff, 0 0 100px rgba(255,0,255,0.5);
+  }
+}
+
+/* Text animation */
 .cybertext {
   font-family: 'Cyberfont', sans-serif;
   color: #00ffe5;

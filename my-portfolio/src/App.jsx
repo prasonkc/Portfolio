@@ -4,16 +4,16 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Background from "./components/Background";
 import Protrait from "./components/Protrait";
+import Cursor from "./components/Cursor";
 
 function App() {
   return (
     <>
       <Background />
-      <div className="mx-10 md:">
+      <Cursor/>
         <Navbar />
         <Hero />
         <Protrait />
-      </div>
     </>
   );
 }
