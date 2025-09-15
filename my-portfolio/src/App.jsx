@@ -28,7 +28,7 @@ function App() {
 
       {/* Page 3 */}
       <Section className="h-screen w-screen flex justify-center items-center">
-        <h1 className="text-6xl text-white">Website under development...</h1>
+        <h1 className="text-6xl text-white">Its still under development lol</h1>
       </Section>
     </div>
     </>
