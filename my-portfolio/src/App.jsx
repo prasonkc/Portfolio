@@ -12,25 +12,26 @@ import Section from "./components/Section";
 function App() {
   return (
     <>
-      <Background/>
-      <Cursor/>
-      <div className="h-screen w-screen overflow-y-scroll snap-mandatory">
-      {/* Page 1 */}
-      <Section className="h-screen w-screen flex flex-col justify-center items-center">
-        <Hero />
-        <Protrait />
-      </Section>
-
-      {/* Page 2 */}
-      <Section className="h-screen w-screen flex justify-center items-center">
-        <Skills />
-      </Section>
-
-      {/* Page 3 */}
-      <Section className="h-screen w-screen flex justify-center items-center">
-        <h1 className="text-6xl text-white">Its still under development lol</h1>
-      </Section>
-    </div>
+      <Background />
+      <Cursor />
+      <div className="h-screen w-screen overflow-y-scroll snap-y snap-mandatory">
+        {" "}
+        {/* Page 1 */}
+        <Section className="h-screen w-screen flex flex-col justify-center items-center">
+          <Hero />
+          <Protrait />
+        </Section>
+        {/* Page 2 */}
+        <Section className="h-screen w-screen flex justify-center items-center">
+          <Skills />
+        </Section>
+        {/* Page 3 */}
+        <Section className="h-screen w-screen flex justify-center items-center">
+          <h1 className="text-6xl text-white">
+            Its still under development lol
+          </h1>
+        </Section>
+      </div>
     </>
   );
 }

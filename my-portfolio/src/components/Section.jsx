@@ -13,7 +13,7 @@ const sectionVariant = {
 export default function Section({ children, className = "" }) {
   return (
     <motion.section
-      className={`h-screen w-full flex items-center justify-center ${className}`}
+className={`min-h-screen w-full flex items-center justify-center py-12 sm:py-0 ${className}`} 
       variants={sectionVariant}
       initial="hidden"
       whileInView="visible"

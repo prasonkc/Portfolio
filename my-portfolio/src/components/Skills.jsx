@@ -2,18 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "HTML", icon: "/icons/html.png" },
-  { name: "CSS", icon: "/icons/css.png" },
-  { name: "JavaScript", icon: "/icons/js.png" },
-  { name: "React", icon: "/icons/react.png" },
-  { name: "Node.js", icon: "/icons/node-js.png" },
-  { name: "Tailwind", icon: "/icons/tailwind.png" },
-  { name: "Express", icon: "/icons/express.png" },
-  { name: "C/C++", icon: "/icons/c.png" },
-  { name: "Java", icon: "/icons/java.png" },
-  { name: "Python", icon: "/icons/python.png" },
-  { name: "Git/Github", icon: "/icons/github.png" },
-  { name: "Linux", icon: "/icons/linux.png" },
+  { name: "HTML", icon: "./icons/html.png" },
+  { name: "CSS", icon: "./icons/css.png" },
+  { name: "JavaScript", icon: "./icons/js.png" },
+  { name: "React", icon: "./icons/react.png" },
+  { name: "Node.js", icon: "./icons/node-js.png" },
+  { name: "Tailwind", icon: "./icons/tailwind.png" },
+  { name: "Express", icon: "./icons/express.png" },
+  { name: "C/C++", icon: "./icons/c.png" },
+  { name: "Java", icon: "./icons/java.png" },
+  { name: "Python", icon: "./icons/python.png" },
+  { name: "Git/Github", icon: "./icons/github.png" },
+  { name: "Linux", icon: "./icons/linux.png" },
 ];
 
 const cardVariant = {
@@ -28,13 +28,13 @@ const cardVariant = {
 export default function Skills() {
   return (
     <motion.section
-      className="py-32 px-6 max-w-6xl mx-auto"
+      className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto" 
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.25 }}
     >
       <h2
-        className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-center mb-16"
+        className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-center mb-12 sm:mb-16" 
         style={{
           fontFamily: "'Cyberfont', sans-serif",
           color: "#ff00ff",

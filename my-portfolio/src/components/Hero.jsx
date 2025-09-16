@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <>
       {/* Name Section */}
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center px-2">   
         <div
           className="cybertext tracking-wider leading-relaxed text-[12vw] font-extrabold text-center text-white"
         >
