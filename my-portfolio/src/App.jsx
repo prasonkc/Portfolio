@@ -10,6 +10,7 @@ import Skills from "./components/Skills";
 import Section from "./components/Section";
 import DeployedProjects from "./components/DeployedProject";
 import OngoingProjects from "./components/OngoingProjects";
+import About from "./components/About";
 
 function App() {
   return (
@@ -37,6 +38,11 @@ function App() {
         {/* Page 4 */}
         <Section className="w-full flex justify-center items-center py-12">
           <OngoingProjects />
+        </Section>
+
+        {/* Page 5 */}
+        <Section className="w-full flex justify-center items-center py-12">
+          <About />
         </Section>
       </div>
     </>
