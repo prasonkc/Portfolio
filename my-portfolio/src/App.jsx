@@ -8,6 +8,8 @@ import Protrait from "./components/Protrait";
 import Cursor from "./components/Cursor";
 import Skills from "./components/Skills";
 import Section from "./components/Section";
+import DeployedProjects from "./components/DeployedProject";
+import OngoingProjects from "./components/OngoingProjects";
 
 function App() {
   return (
@@ -29,7 +31,12 @@ function App() {
 
         {/* Page 3 */}
         <Section className="w-full flex justify-center items-center py-12">
-          <h1 className="text-6xl text-white">Its still under development lol</h1>
+          <DeployedProjects />
+        </Section>
+
+        {/* Page 4 */}
+        <Section className="w-full flex justify-center items-center py-12">
+          <OngoingProjects />
         </Section>
       </div>
     </>

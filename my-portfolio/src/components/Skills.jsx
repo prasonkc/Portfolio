@@ -73,7 +73,7 @@ export default function Skills() {
 
             {/* Skill Name */}
             <span
-              className="text-2xl sm:text-3xl font-bold transition-colors duration-300 hover:text-purple-400"
+              className="text-2xl sm:text-3xl font-bold transition-colors duration-100 hover:text-purple-400"
               style={{
                 fontFamily: "'Cyberfont', sans-serif",
                 textShadow: "0 0 5px #ff00ff, 0 0 10px #ff00ff",
