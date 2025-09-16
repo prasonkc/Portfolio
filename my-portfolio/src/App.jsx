@@ -11,7 +11,7 @@ import Section from "./components/Section";
 import DeployedProjects from "./components/DeployedProject";
 import OngoingProjects from "./components/OngoingProjects";
 import About from "./components/About";
-
+import { Houses } from "./components/layers/Houses";
 function App() {
   return (
     <>
@@ -19,6 +19,8 @@ function App() {
       <Cursor />
 
       <div className="min-h-screen w-screen overflow-y-auto snap-y snap-mandatory">
+
+
         <Section className="w-full flex flex-col justify-center items-center py-12">
           <Hero />
           <Protrait />
