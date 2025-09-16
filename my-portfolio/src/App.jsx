@@ -14,22 +14,22 @@ function App() {
     <>
       <Background />
       <Cursor />
-      <div className="h-screen w-screen overflow-y-scroll snap-y snap-mandatory">
-        {" "}
-        {/* Page 1 */}
-        <Section className="h-screen w-screen flex flex-col justify-center items-center">
+
+      <div className="min-h-screen w-screen overflow-y-auto snap-y snap-mandatory">
+        {/* Page 1 - removed h-screen here (Section already uses min-h-screen) */}
+        <Section className="w-full flex flex-col justify-center items-center py-12">
           <Hero />
           <Protrait />
         </Section>
+
         {/* Page 2 */}
-        <Section className="h-screen w-screen flex justify-center items-center">
+        <Section className="w-full flex justify-center items-center py-12">
           <Skills />
         </Section>
+
         {/* Page 3 */}
-        <Section className="h-screen w-screen flex justify-center items-center">
-          <h1 className="text-6xl text-white">
-            Its still under development lol
-          </h1>
+        <Section className="w-full flex justify-center items-center py-12">
+          <h1 className="text-6xl text-white">Its still under development lol</h1>
         </Section>
       </div>
     </>
