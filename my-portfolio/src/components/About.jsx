@@ -56,7 +56,7 @@ export default function Socials() {
             className="px-8 py-4 bg-cyan-500 text-black font-bold rounded-xl shadow-lg shadow-cyan-400/50 hover:bg-cyan-400 transition-all cursor-none"
             whileHover={{ scale: 1.1 }} 
             whileTap={{ scale: 0.95 }}
-            onClick={alert("The message doesn't work because backend is offline")}
+            onClick={() => alert("The message doesn't work because backend is offline")}
           >
             Send Message
           </motion.button>
