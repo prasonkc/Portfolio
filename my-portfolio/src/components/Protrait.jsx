@@ -1,29 +1,33 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Portrait = () => {
   const [hover, setHover] = useState(false);
 
-  // Array of texts
   const texts = ["I'm shy!", "Please dont touch me", "NO!", "help!", "pls hire me 😭"];
   const randomText = texts[Math.floor(Math.random() * texts.length)];
 
-  return (
-<motion.div
-  className="w-full sm:w-[90%] md:w-[60vw] mx-auto flex flex-col sm:flex-row gap-8 sm:gap-10 items-center sm:items-start px-4 mb-8"
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: false, amount: 0.1 }}   
-  transition={{ duration: 0.8, ease: "easeOut" }}
->
+  const { scrollY } = useScroll();
 
+  // moves left and down
+  const imgX = useTransform(scrollY, [0, 800], [0, -150]); // left
+  const imgY = useTransform(scrollY, [0, 800], [0, 150]);  // down
+  const imgOpacity = useTransform(scrollY, [0, 800], [1, 0]);
+
+  // moves right and down
+  const descX = useTransform(scrollY, [0, 800], [0, 150]); // right
+  const descY = useTransform(scrollY, [0, 800], [0, 150]); // down
+  const descOpacity = useTransform(scrollY, [0, 900], [1, 0]);
+
+  return (
+    <div className="w-full sm:w-[90%] md:w-[60vw] mx-auto flex flex-col sm:flex-row gap-8 sm:gap-10 items-center sm:items-start px-4 mb-8">
       {/* Portrait frame */}
-      <div
+      <motion.div
         className="cyberpunk-frame w-[80vw] sm:w-[320px] md:w-[400px] lg:w-[450px] aspect-square bg-black/70 border-2 border-cyan-400 rounded-xl shadow-lg shadow-cyan-400/50 flex items-center justify-center relative overflow-hidden flex-shrink-0"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
+        style={{ x: imgX, y: imgY, opacity: imgOpacity }}
       >
-        {/* Image */}
         <img
           src="./protrait.png"
           alt="cyberhero"
@@ -33,8 +37,6 @@ const Portrait = () => {
             ${hover ? "translate-y-[100%] opacity-0" : "translate-y-0 opacity-90"}
           `}
         />
-
-        {/* Tooltip */}
         <div
           className={`
             absolute bottom-4 left-1/2 transform -translate-x-1/2
@@ -44,7 +46,7 @@ const Portrait = () => {
         >
           {randomText}
         </div>
-      </div>
+      </motion.div>
 
       {/* Description */}
       <motion.div
@@ -56,15 +58,14 @@ const Portrait = () => {
             1px 1px 2px #00ffe5,
             2px 2px 4px rgba(0,255,240,0.3)
           `,
+          x: descX,
+          y: descY,
+          opacity: descOpacity,
         }}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.25 }}
-        transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
       >
         Hey, welcome to my little corner of the internet. I’m a computer science student who likes turning weird ideas into fun (and sometimes stupid) projects. Stick around and see what I’ve been playing with!
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
