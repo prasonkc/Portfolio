@@ -19,7 +19,6 @@ function App() {
       <Cursor />
 
       <div className="min-h-screen w-screen overflow-y-auto snap-y snap-mandatory">
-        {/* Page 1 - removed h-screen here (Section already uses min-h-screen) */}
         <Section className="w-full flex flex-col justify-center items-center py-12">
           <Hero />
           <Protrait />

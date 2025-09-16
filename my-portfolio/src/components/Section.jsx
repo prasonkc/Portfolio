@@ -13,7 +13,6 @@ const sectionVariant = {
 export default function Section({ children, className = "" }) {
   return (
     <motion.section
-      // 🔥 Changed: use min-h-screen + vertical padding so section can grow on small screens
       className={`min-h-screen w-full flex items-center justify-center py-12 ${className}`}
       variants={sectionVariant}
       initial="hidden"

@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const socials = [
-  { name: "GitHub", icon: "./socials/github.png", link: "https://github.com/yourusername" },
-  { name: "LinkedIn", icon: "./socials/linkedin.png", link: "https://linkedin.com/in/yourusername" },
-  { name: "Twitter", icon: "./socials/x.png", link: "https://twitter.com/yourusername" },
-  { name: "Instagram", icon: "./socials/instagram.png", link: "https://instagram.com/yourusername" },
-  { name: "Facebook", icon: "./socials/facebook.png", link: "https://facebook.com/yourusername" },
+  { name: "GitHub", icon: "./socials/github.png", link: "https://github.com/prasonkc" },
+  { name: "LinkedIn", icon: "./socials/linkedin.png", link: "https://www.linkedin.com/in/prason-kc-6782061b6/" },
+  { name: "Twitter", icon: "./socials/x.png", link: "https://twitter.com/KcPrason" },
+  { name: "Instagram", icon: "./socials/instagram.png", link: "https://instagram.com/prasonkc" },
+  { name: "Facebook", icon: "./socials/facebook.png", link: "https://facebook.com/prason.kc.1" },
 ];
 
 export default function Socials() {

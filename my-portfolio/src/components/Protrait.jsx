@@ -43,7 +43,6 @@ const Portrait = () => {
       {/* Description */}
       <div
         className="text-cyan-200 flex-1 w-full text-base sm:text-xl md:text-2xl lg:text-3xl leading-relaxed z-10 mt-4 sm:mt-0"
-        // 🔥 made description flex-1 so it wraps below the image cleanly on small screens
         style={{
           fontFamily: "'Cyberfont', monospace",
           color: "#00ffd0",
@@ -53,10 +52,7 @@ const Portrait = () => {
           `,
         }}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt porro,
-        nesciunt excepturi reprehenderit totam libero praesentium dolore eius,
-        omnis ea in atque suscipit assumenda facilis sunt. Quam commodi nesciunt
-        iusto facilis sapiente,
+       Hey, welcome to my little corner of the internet. I’m a computer science student who likes turning weird ideas into fun (and sometimes stupid) projects. Stick around and see what I’ve been playing with!
       </div>
     </div>
   );
