@@ -40,7 +40,7 @@ const Portrait = () => {
         <div
           className={`
             absolute bottom-4 left-1/2 transform -translate-x-1/2
-            bg-pink-500 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg transition-all duration-500
+            bg-pink-500 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg
             ${hover ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           `}
         >
