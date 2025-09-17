@@ -14,6 +14,8 @@ const skills = [
   { name: "Python", icon: "./icons/python.png" },
   { name: "Git/Github", icon: "./icons/github.png" },
   { name: "Linux", icon: "./icons/linux.png" },
+  { name: "MySQL", icon: "./icons/sql.png" },
+  { name: "MongoDB", icon: "./icons/mongodb.png" },
 ];
 
 const cardVariant = {
